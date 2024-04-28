@@ -13,3 +13,12 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice(){
+    let humanChoice ; 
+    while (humanChoice != "rock" && humanChoice != "paper" && humanChoice != "scissors"){
+        humanChoice = prompt("Select rock, paper or scissors");
+    }
+    return humanChoice.toLowerCase();
+}
+console.log(getHumanChoice());
