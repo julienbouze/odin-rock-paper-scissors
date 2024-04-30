@@ -1,27 +1,237 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
 
-  * {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-  }
+body {
+  padding: 1vw;
+  font-family: Roboto;
+  background-color: #000b1a;
+  color: #ffffff;
+
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 1vw;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerName {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+.playerScore {
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+.choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+  color: #000b1a;
+  cursor: pointer;
+}
+
+.choice:not(.disabled):hover{
+  color : white;
+}
+
+.choice i {
+  font-size: 7vw;
+}
+
+#rock {
+  background: #00a2ff;
+  background: linear-gradient(45deg, #00a2ff 0%, #005b8f 100%);
+  border: 0.5vw solid #00a2ff;
+}
+
+#paper {
+  background: #ff007b;
+  background: linear-gradient(45deg, #ff007b 0%, #970049 100%);
+  border: 0.5vw solid #ff007b;
+}
+
+#scissors {
+  background: #aaff00;
+  background: linear-gradient(45deg, #aaff00 0%, #649600 100%);
+  border: 0.5vw solid #aaff00;
+}
+
+.disabled {
+  background: #3e3e3e !important;
+  border:0.5vw solid #ffffff23!important;
+  cursor: unset !important;
+}
+
+#result,
+#winner {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  justify-content: center;
+  align-items: center;
+}
+
+#winner {
+  padding: 1vw;
+}
+
+.round {
+  display: flex;
+  justify-content: center;
+  padding: 1vw;
+}
+
+
+.computer {
+  background-color: #b80040;
+  border: 1px solid #ff0059;
+}
+
+.draw {
+  background-color: #a87300;
+  border: 1px solid #ffae00;
+}
+
+.human {
+  background-color: #007d3a;
+  border: 1px solid #00ff77;
+}
+
+#resetButton {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff25;
+  color: #ffffff;
+  border: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom: 3px solid #ffffff85;
+  padding: 0.8vw;
+  cursor: pointer;
+}
+
+#resetButton:hover {
+  background-color: #ffffff55;
+
+}

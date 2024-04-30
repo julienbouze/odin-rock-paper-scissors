@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Rock, Paper, Scissors !</title>
     <script src="scripts/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/main.css" />
 </head>
+
 <body>
-    <p>To play Rock, Paper, Scissors, make sure to open the console by pressing F12 !</p>
+    <div class="container">
+        <h1>Rock, Paper, Scissors !</h1>
+        <div class="score">
+            <div id="user" class="player">
+                <div class="playerName">
+                    User
+                </div>
+                <div id="userScore" class="playerScore">
+                    <p>0</p>
+                </div>
+            </div>
+            <div id="vs">
+                VS
+            </div>
+            <div id="computer" class="player">
+                <div class="playerName">
+                    Computer
+                </div>
+                <div id="computerScore" class="playerScore">
+                    <p>0</p>
+                </div>
+            </div>
+        </div>
+        <div id="winner">
+            <p id="winnerText"></p>
+            <button id="resetButton" style="display: none;">Start Again ?</button>
+        </div>
+        
+        <div class="game">
+            <div id="rock" class="choice">
+                <i class="fa-regular fa-hand-back-fist"></i>
+            </div>
+            <div id="paper" class="choice">
+                <i class="fa-regular fa-hand"></i>
+            </div>
+            <div id="scissors" class="choice">
+                <i class="fa-regular fa-hand-scissors"></i>
+            </div>
+            
+        </div>
+        <div id="result"></div>
+        
+    </div>
 </body>
+
 </html>

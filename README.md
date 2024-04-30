@@ -4,3 +4,5 @@
 
 The goal of this project is to learn :
 - Javascript basics
+- DOM/Events manipulation
+- Git branches management
